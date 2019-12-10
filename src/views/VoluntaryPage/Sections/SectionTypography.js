@@ -10,8 +10,6 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    marginTop: 15,
-    marginBottom: 15,
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
@@ -85,18 +83,16 @@ export default function ImageGridList() {
   const classes = useStyles();
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', marginTop: 20 }}>
-      <div style={{ display: 'flex', flexDirection: 'column', paddingLeft: '5%', paddingRight: '5%', paddingBottom: 15, maxWidth: 1500 }}>
-        <h2>Registro de nossos encontros</h2>
-        <div className={classes.root}>
-          <GridList cellHeight={160} className={classes.gridList} cols={12} >
-            {tileData.map(tile => (
-              <GridListTile key={tile.img} cols={tile.cols || 1} >
-                <img src={tile.img} alt={tile.title} />
-              </GridListTile>
-            ))}
-          </GridList>
-        </div>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <h2>Registro de nossos encontros</h2>
+      <div className={classes.root}>
+        <GridList cellHeight={160} className={classes.gridList} cols={12} >
+          {tileData.map(tile => (
+            <GridListTile key={tile.img} cols={tile.cols || 1}>
+              <img src={tile.img} alt={tile.title} />
+            </GridListTile>
+          ))}
+        </GridList>
       </div>
     </div>
   );

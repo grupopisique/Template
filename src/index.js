@@ -19,7 +19,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/equipe" component={LandingPage} />
       <Route path="/voluntario" component={VoluntaryPage} />
-      <Route path="/profile-page" component={ProfilePage} />
+      <Route path="/profile" component={ProfilePage} />
       <Route path="/portal" component={LoginPage} />
       <Route path="/" component={Components} />
     </Switch>

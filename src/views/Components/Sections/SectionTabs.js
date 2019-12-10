@@ -40,11 +40,11 @@ export default function SectionTabs() {
   // const primary = '#F44336'
 
   return (
-    <div className={classes.section} style={{ backgroundColor: '#39b4fe' }}>
+    <div className={classes.section} style={{ backgroundColor: '#7159c1' }}>
       {/* <div className={classes.section} style={{ backgroundColor: '#493980' }}> */}
       <div className={classes.container}>
         <div id="nav-tabs">
-          <h3>Nossos Encontros</h3>
+          <h3 style={{color: '#fff'}}>Nossos Encontros</h3>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               {/* <h3>
@@ -52,7 +52,9 @@ export default function SectionTabs() {
               </h3> */}
               <CustomTabs
                 // plainTabs
-                headerColor='primary'
+                // style={{headerColor: '#333'}}
+                headerColor='success'
+                // headerColor='primary'
                 tabs={[
                   {
                     tabName: "Publico Alvo",

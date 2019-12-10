@@ -22,6 +22,7 @@ import VoluntarySection from "./Sections/VoluntarySection.js";
 import SectionPills from "./Sections/SectionPills.js";
 import SectionNavBars from "./Sections/SectionNavbars.js";
 import SectionForm from "./Sections/SectionDownload";
+import Galeria from "./Sections/SectionTypography";
 
 const dashboardRoutes = [];
 
@@ -49,10 +50,11 @@ export default function LandingPage(props) {
           <VoluntarySection />
           {/* <SectionPills /> */}
           <SectionNavBars />
+          <Galeria />
           <SectionForm />
+        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </div >
   );
 }

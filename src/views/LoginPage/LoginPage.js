@@ -44,6 +44,7 @@ export default function LoginPage(props) {
       <div
         className={classes.pageHeader}
         style={{
+          // backgroundImage: 'url(https://source.unsplash.com/random)',
           backgroundImage: "url(" + image + ")",
           backgroundSize: "cover",
           backgroundPosition: "top center"

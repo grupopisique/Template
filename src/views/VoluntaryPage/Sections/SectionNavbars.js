@@ -51,7 +51,7 @@ export default function SectionNavbars() {
   };
 
   return (
-    <div style={{paddingBottom: 30, paddinTop: 30}}>
+    <div style={{paddinTop: 30}}>
       <div id="navbar" className={classes.navbar}>
         <div
           className={classes.navigation}

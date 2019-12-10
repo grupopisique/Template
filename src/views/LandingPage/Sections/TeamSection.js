@@ -51,7 +51,7 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                Cursou Informática em Escola Técnica Profissionalizante e desde o ... <a href=''> Ver mais</a>.
+                Cursou Informática em Escola Técnica Profissionalizante e desde o ... <a href='/profile'> Ver mais</a>.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -91,7 +91,7 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                Cursou Informática em Escola Técnica Profissionalizante e desde o ... <a href=''> Ver mais</a>.
+                Cursou Informática em Escola Técnica Profissionalizante e desde o ... <a href='/profile'> Ver mais</a>.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -131,7 +131,7 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                Cursou Informática em Escola Técnica Profissionalizante e desde o ... <a href=''> Ver mais</a>.
+                Cursou Informática em Escola Técnica Profissionalizante e desde o ... <a href='/profile'> Ver mais</a>.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>

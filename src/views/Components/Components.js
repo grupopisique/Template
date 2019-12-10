@@ -82,6 +82,7 @@ export default function Components(props) {
         <AboutUS />
         <ProductSection />
         <SectionTabs />
+        <SectionTypography />
 
         {/* <SectionJavascript /> */}
 
@@ -92,7 +93,6 @@ export default function Components(props) {
         {/* <SectionNavbars /> */}
         {/* <SectionPills /> */}
         {/* <SectionNotifications /> */}
-        {/* <SectionTypography /> */}
         {/* <SectionCarousel /> */}
 
 
