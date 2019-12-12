@@ -6,6 +6,7 @@ import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
+
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -19,19 +20,41 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 
+
+
+import TextField from '@material-ui/core/TextField';
+
+
+
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/capa.png";
+import loginStyle from "assets/jss/material-kit-react/views/componentsSections/loginStyle";
 
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-  setTimeout(function() {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+  setTimeout(function () {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
   const { ...rest } = props;
+
+  const loginCount = () => {
+
+    if (email == 'adrian@pisique.com.br' && password == 123456) {
+      console.log('Login realizado com sucesso!!!!')
+    } 
+
+    if (email != 'adrian@pisique.com.br' || password != 123456) {
+      console.log('Atenção! Algo de errado não esta certo')
+    } 
+  }
+
   return (
     <div>
       <Header
@@ -44,8 +67,8 @@ export default function LoginPage(props) {
       <div
         className={classes.pageHeader}
         style={{
-          // backgroundImage: 'url(https://source.unsplash.com/random)',
-          backgroundImage: "url(" + image + ")",
+          backgroundImage: 'url(https://source.unsplash.com/random)',
+          // backgroundImage: "url(" + image + ")",
           backgroundSize: "cover",
           backgroundPosition: "top center"
         }}
@@ -55,7 +78,7 @@ export default function LoginPage(props) {
             <GridItem xs={12} sm={12} md={4}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
-                  <CardHeader color="primary" className={classes.cardHeader}>
+                  <CardHeader style={{backgroundColor: '#5586df', color: '#fff'}}className={classes.cardHeader}>
                     <h4>Login</h4>
                     <div className={classes.socialLine}>
                       <Button
@@ -87,59 +110,26 @@ export default function LoginPage(props) {
                       </Button>
                     </div>
                   </CardHeader>
-                  {/* <p className={classes.divider}>Or Be Classical</p> */}
                   <CardBody>
-                    <CustomInput
-                      labelText="Usuario"
-                      id="first"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
+
+                    <TextField
+                      style={{ width: '100%', marginBottom: 20 }}
+                      required
+                      label="Email"
+                      onChange={email => setEmail(email.currentTarget.value)}
                     />
-                    <CustomInput
-                      labelText="Email"
-                      id="email"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "email",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
+
+                    <TextField
+                      style={{ width: '100%' }}
+                      label="Senha"
+                      type="password"
+                      autoComplete="current-password"
+                      onChange={password => setPassword(password.currentTarget.value)}
                     />
-                    <CustomInput
-                      labelText="Senha"
-                      id="pass"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "password",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Icon className={classes.inputIconsColor}>
-                              lock_outline
-                            </Icon>
-                          </InputAdornment>
-                        ),
-                        autoComplete: "off"
-                      }}
-                    />
+
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
+                    <Button simple color="primary" size="lg" onClick={() => loginCount()}>
                       Entrar
                     </Button>
                   </CardFooter>

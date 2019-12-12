@@ -53,7 +53,7 @@ const signupPageStyle = {
     marginLeft: "20px",
     marginRight: "20px",
     marginTop: "-40px",
-    padding: "20px 0",
+    padding: "8px 0",
     marginBottom: "15px"
   },
   socialIcons: {
@@ -79,7 +79,7 @@ const signupPageStyle = {
     justifyContent: "center !important"
   },
   socialLine: {
-    marginTop: "1rem",
+    // marginTop: "1rem",
     textAlign: "center",
     padding: "0"
   },
