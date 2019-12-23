@@ -20,7 +20,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 
-
+import axios from 'axios';
 
 import TextField from '@material-ui/core/TextField';
 
@@ -30,7 +30,7 @@ import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/capa.png";
 import loginStyle from "assets/jss/material-kit-react/views/componentsSections/loginStyle";
-
+import { Redirect } from "react-router-dom";
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
@@ -46,13 +46,24 @@ export default function LoginPage(props) {
 
   const loginCount = () => {
 
+    axios({
+      method: 'get',
+      url: 'http://localhost:3000',
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
     if (email == 'adrian@pisique.com.br' && password == 123456) {
       console.log('Login realizado com sucesso!!!!')
-    } 
+    }
 
     if (email != 'adrian@pisique.com.br' || password != 123456) {
       console.log('Atenção! Algo de errado não esta certo')
-    } 
+    }
   }
 
   return (
@@ -78,7 +89,7 @@ export default function LoginPage(props) {
             <GridItem xs={12} sm={12} md={4}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
-                  <CardHeader style={{backgroundColor: '#5586df', color: '#fff'}}className={classes.cardHeader}>
+                  <CardHeader style={{ backgroundColor: '#5586df', color: '#fff' }} className={classes.cardHeader}>
                     <h4>Login</h4>
                     <div className={classes.socialLine}>
                       <Button
@@ -129,8 +140,8 @@ export default function LoginPage(props) {
 
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg" onClick={() => loginCount()}>
-                      Entrar
+                      <Button simple color="primary" size="lg" onClick={() => loginCount()}>
+                        Entrar
                     </Button>
                   </CardFooter>
                 </form>

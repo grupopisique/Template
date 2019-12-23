@@ -66,7 +66,13 @@ const tileData = [
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1z7tG8lc5ZHlkOSBUmQD6A_zEX6YXqplRjHq7lIuBTgzSiyZ9',
     title: 'Image',
     author: 'author',
-    cols: 6,
+    cols: 3,
+  },
+  {
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1z7tG8lc5ZHlkOSBUmQD6A_zEX6YXqplRjHq7lIuBTgzSiyZ9',
+    title: 'Image',
+    author: 'author',
+    cols: 3,
   },
   {
     img: 'https://http2.mlstatic.com/papel-de-parede-cachoeira-lago-floresta-natureza-gg359-D_NQ_NP_731409-MLB28498054130_102018-F.jpg',
